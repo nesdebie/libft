@@ -60,7 +60,7 @@ static char		*ft_add_word(char const *str, char c)
 	i = 0;
 	while (str[i] && str[i] != c)
 		i++;
-	lstr = malloc(sizeof(char) * i);
+	lstr = malloc(sizeof(char) * i + 1);
 	if (lstr == NULL)
 		return (0);
 	i = 0;
@@ -92,7 +92,7 @@ char			**ft_split(char const *str, char c)
 		if (str[i] && str[i] != c)
 		{
 			if (!(split[j] = ft_add_word(&str[i], c)))
-				return (ft_freemysplit(--j, split));
+				return (ft_freemysplit(j, split));
 			j++;
 			while (str[i] && str[i] != c)
 				i++;
