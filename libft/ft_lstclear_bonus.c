@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:35:28 by nedebies          #+#    #+#             */
-/*   Updated: 2021/03/17 20:35:29 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/03/18 10:13:35 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (tmp != NULL)
 	{
 		*lst = tmp;
-		ft_lstdelone(*lst, del);
 		tmp = tmp->next;
+		ft_lstdelone(*lst, del);
 	}
 	*lst = NULL;
 }

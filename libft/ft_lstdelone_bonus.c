@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:35:35 by nedebies          #+#    #+#             */
-/*   Updated: 2021/03/17 20:35:37 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/03/18 10:05:04 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst != NULL && del != NULL)
+	if (lst != NULL && del != NULL)//if() a suppr ?
 	{
-		del(lst->content);
+		(*del)(lst->content);
 		free(lst);
 	}
 }
