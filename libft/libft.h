@@ -6,12 +6,12 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:41:43 by nedebies          #+#    #+#             */
-/*   Updated: 2021/03/17 20:41:45 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/01 12:14:30 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _LIBFT_H
-# define _LIBFT_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
 # include <string.h>
 # include <stdlib.h>
