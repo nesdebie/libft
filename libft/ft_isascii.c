@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:34:08 by nedebies          #+#    #+#             */
-/*   Updated: 2021/03/17 20:34:09 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/02 00:03:35 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
+	unsigned char my_c;
+
+	my_c = (unsigned char)c;
+	if (my_c <= 127)
 		return (1);
 	return (0);
 }
