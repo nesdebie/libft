@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:37:44 by nedebies          #+#    #+#             */
-/*   Updated: 2021/03/17 20:37:44 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/02 12:35:46 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static	char	**ft_protect(void)
 	return (str);
 }
 
-static int		ft_words_count(char const *str, char c)
+static int	ft_words_count(char const *str, char c)
 {
 	int		i;
 	int		wc;
@@ -52,7 +52,7 @@ static int		ft_words_count(char const *str, char c)
 	return (wc);
 }
 
-static char		*ft_add_word(char const *str, char c)
+static char	*ft_add_word(char const *str, char c)
 {
 	int		i;
 	char	*lstr;
@@ -73,7 +73,7 @@ static char		*ft_add_word(char const *str, char c)
 	return (lstr);
 }
 
-char			**ft_split(char const *str, char c)
+char	**ft_split(char const *str, char c)
 {
 	int		i;
 	int		j;
@@ -83,7 +83,8 @@ char			**ft_split(char const *str, char c)
 	j = 0;
 	if (ft_strlen(str) == 0)
 		return (ft_protect());
-	if (!(split = malloc(sizeof(char *) * (ft_words_count(str, c) + 1))))
+	split = malloc(sizeof(char *) * (ft_words_count(str, c) + 1));
+	if (!split)
 		return (0);
 	while (str[i])
 	{
@@ -91,7 +92,8 @@ char			**ft_split(char const *str, char c)
 			i++;
 		if (str[i] && str[i] != c)
 		{
-			if (!(split[j] = ft_add_word(&str[i], c)))
+			split[j] = ft_add_word(&str[i], c);
+			if (!split)
 				return (ft_freemysplit(j, split));
 			j++;
 			while (str[i] && str[i] != c)

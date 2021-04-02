@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:34:44 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/02 12:21:39 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/02 12:44:10 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	ft_intsize(int n)
 	return (size);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*nb;
 	int		len;
@@ -43,7 +43,8 @@ char		*ft_itoa(int n)
 
 	t = n;
 	len = ft_intsize(n);
-	if (!(nb = malloc(sizeof(char) * (len + 1))))
+	nb = malloc(sizeof(char) * (len + 1));
+	if (!nb)
 		return (0);
 	nb[len] = '\0';
 	if (n == -2147483648)

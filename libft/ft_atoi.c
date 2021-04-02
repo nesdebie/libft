@@ -6,13 +6,13 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:33:12 by nedebies          #+#    #+#             */
-/*   Updated: 2021/03/17 20:33:15 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/02 12:41:41 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int		ft_isovermaxmin(int sign, unsigned long value)
+static	int	ft_isovermaxmin(int sign, unsigned long value)
 {
 	if (sign == 1 && value > 2147483647)
 		return (-1);
@@ -21,7 +21,7 @@ static	int		ft_isovermaxmin(int sign, unsigned long value)
 	return (sign * value);
 }
 
-int				ft_atoi(char const *str)
+int	ft_atoi(char const *str)
 {
 	int					i;
 	int					sign;
@@ -30,8 +30,7 @@ int				ft_atoi(char const *str)
 	res = 0;
 	i = 0;
 	sign = 1;
-	while (str[i] == 32 || str[i] == '\f' || str[i] == '\n' || str[i] == '\r'
-			|| str[i] == '\t' || str[i] == '\v')
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	if (str[i] == 43 || str[i] == 45)
 	{

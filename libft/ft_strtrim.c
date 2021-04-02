@@ -6,13 +6,13 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:41:10 by nedebies          #+#    #+#             */
-/*   Updated: 2021/03/17 20:41:11 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/02 12:39:50 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		char_in_set(char c, char *set)
+static int	char_in_set(char c, char *set)
 {
 	while (*set)
 	{
@@ -23,7 +23,7 @@ static int		char_in_set(char c, char *set)
 	return (0);
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
 	int		start;
@@ -33,11 +33,11 @@ char			*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	if (s1 == NULL || set == NULL)
 		return ((char *)s1);
-	while (char_in_set(s1[i], (char*)set) && s1[i])
+	while (char_in_set(s1[i], (char *)set) && s1[i])
 		i++;
 	start = i;
 	i = ft_strlen(s1) - 1;
-	while (char_in_set(s1[i], (char*)set) && i > start)
+	while (char_in_set(s1[i], (char *)set) && i > start)
 		i--;
 	end = i;
 	i = 0;

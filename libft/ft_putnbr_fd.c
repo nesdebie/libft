@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:37:11 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/02 12:22:36 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/02 12:29:17 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static char	ft_putchar(int nb)
 	return (n);
 }
 
-void		ft_putnbr_fd(int nb, int fd)
+void	ft_putnbr_fd(int nb, int fd)
 {
 	char nbr;
 
