@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:34:44 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/02 12:44:10 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/02 13:23:19 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,15 @@ static int	ft_intsize(int n)
 	return (size);
 }
 
+static int	ft_setnegative(int n)
+{
+	if (n == -2147483648)
+		n = n + 1;
+	if (n < 0)
+		n = n * (-1);
+	return (n);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*nb;
@@ -47,10 +56,7 @@ char	*ft_itoa(int n)
 	if (!nb)
 		return (0);
 	nb[len] = '\0';
-	if (n == -2147483648)
-		n = n + 1;
-	if (n < 0)
-		n = n * (-1);
+	n = ft_setnegative(n);
 	while (len-- > 0)
 	{
 		tmp = n % 10 + '0';
