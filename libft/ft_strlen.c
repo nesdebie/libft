@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:39:28 by nedebies          #+#    #+#             */
-/*   Updated: 2021/03/17 20:39:29 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/02 12:23:10 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(char const *str)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	while (str != NULL && str[i] != '\0')

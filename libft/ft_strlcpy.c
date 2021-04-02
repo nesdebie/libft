@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:39:22 by nedebies          #+#    #+#             */
-/*   Updated: 2021/03/17 20:39:23 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/02 12:23:06 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dest, char const *src, size_t n)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	if (dest == NULL)

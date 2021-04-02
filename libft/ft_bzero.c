@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:33:24 by nedebies          #+#    #+#             */
-/*   Updated: 2021/03/17 20:33:26 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/02 12:21:23 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *str, size_t n)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	while (i < n && str != NULL)

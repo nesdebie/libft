@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:41:34 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/02 00:02:14 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/02 12:23:40 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_toupper(int c)
 {
-	unsigned char my_c;
+	unsigned char	my_c;
 
 	my_c = (unsigned char)c;
 	if (my_c >= 97 && my_c <= 122)

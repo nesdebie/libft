@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:37:11 by nedebies          #+#    #+#             */
-/*   Updated: 2021/03/17 20:37:12 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/02 12:22:36 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static char	ft_putchar(int nb)
 {
-	char n;
+	char	n;
 
 	n = '0' + nb;
 	return (n);
