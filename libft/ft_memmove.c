@@ -6,13 +6,13 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:36:42 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/01 15:24:03 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/02 10:37:42 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*setret(void *dest, const void *src, size_t n)
+static void	*setret(void *dest, const void *src, size_t n)
 {
 	size_t			i;
 	unsigned char	*d;
