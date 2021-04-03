@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:37:44 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/02 13:32:37 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/02 13:52:37 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,8 +95,7 @@ char	**ft_split(char const *str, char c)
 			split[j] = ft_add_word(&str[i], c);
 			if (!split[j++])
 				return (ft_free_my_split(--j, split));
-			while (str[i] && str[i] != c)
-				i++;
+			while (str[i] && str[i++] != c);
 		}
 	}
 	split[j] = 0;
