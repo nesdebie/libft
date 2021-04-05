@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/18 09:46:35 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/05 22:23:12 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/05 22:28:59 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnstr(char const *str, char const *tofind, size_t n)
 	j = ft_strlen(tofind);
 	if (j == 0)
 		return ((char *)str);
-	if (j > n)
+	if (j > n || ft_strlen(str) == 0)
 		return (NULL);
 	while (i < n)
 	{
