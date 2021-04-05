@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:37:44 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/03 11:38:05 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/05 22:08:55 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ char	**ft_split(char const *str, char c)
 
 	i = 0;
 	j = 0;
-	if (ft_strlen(str) == 0)
+	if (!str)
 		return (ft_protect());
 	split = malloc(sizeof(char *) * (ft_words_count(str, c) + 1));
 	if (!split)
