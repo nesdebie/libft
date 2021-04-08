@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:35:53 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/08 16:59:23 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/08 21:27:21 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
 	t_list	*dest;
-	
+
 	dest = NULL;
 	while (lst)
 	{
@@ -25,7 +25,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstadd_back(&dest, new);
 		else
 		{
-			del(new->content);
 			ft_lstclear(&dest, del);
 			return (NULL);
 		}
