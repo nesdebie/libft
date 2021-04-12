@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/17 20:36:09 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/02 12:40:07 by nedebies         ###   ########.fr       */
+/*   Created: 2021/04/12 15:50:32 by nedebies          #+#    #+#             */
+/*   Updated: 2021/04/12 15:50:34 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int		i;
+	t_list	*tmp;
 
-	i = 0;
-	if (lst == NULL)
-		return (0);
-	while (lst != NULL)
+	if (lst && f)
 	{
-		lst = lst->next;
-		i++;
+		tmp = lst->next;
+		f(lst->content);
+		ft_lstiter(tmp, f);
 	}
-	return (i);
 }

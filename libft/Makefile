@@ -6,7 +6,7 @@
 #    By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 09:54:51 by nedebies          #+#    #+#              #
-#    Updated: 2021/04/08 09:54:54 by nedebies         ###   ########.fr        #
+#    Updated: 2021/04/12 15:52:07 by nedebies         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,15 +47,15 @@ SRCS 	=	ft_atoi.c\
 		ft_putnbr_fd.c\
 		ft_putstr_fd.c\
 
-BONUS		= ft_lstadd_back_bonus.c\
-				  ft_lstadd_front_bonus.c\
-				  ft_lstclear_bonus.c\
-				  ft_lstdelone_bonus.c\
-				  ft_lstiter_bonus.c\
-				  ft_lstlast_bonus.c\
-				  ft_lstnew_bonus.c\
-				  ft_lstsize_bonus.c\
-				  ft_lstmap_bonus.c\
+BONUS		= ft_lstadd_back.c\
+				  ft_lstadd_front.c\
+				  ft_lstclear.c\
+				  ft_lstdelone.c\
+				  ft_lstiter.c\
+				  ft_lstlast.c\
+				  ft_lstnew.c\
+				  ft_lstsize.c\
+				  ft_lstmap.c\
 
 FLAGS		=	-Wall -Wextra -Werror
 

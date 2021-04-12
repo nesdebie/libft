@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/17 20:35:21 by nedebies          #+#    #+#             */
-/*   Updated: 2021/03/17 20:35:22 by nedebies         ###   ########.fr       */
+/*   Created: 2021/04/12 15:51:06 by nedebies          #+#    #+#             */
+/*   Updated: 2021/04/12 15:51:08 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **alst, t_list *new)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*tmp;
+	t_list	*new;
+	t_list	*dest;
 
-	tmp = *alst;
-	if (!(alst == NULL) && !(new == NULL))
+	dest = NULL;
+	while (lst)
 	{
-		new->next = tmp;
-		*alst = new;
+		new = ft_lstnew((*f)(lst->content));
+		if (new)
+			ft_lstadd_back(&dest, new);
+		else
+		{
+			ft_lstclear(&dest, del);
+			return (NULL);
+		}
+		lst = lst->next;
 	}
+	return (dest);
 }
