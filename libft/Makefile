@@ -6,7 +6,7 @@
 #    By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 09:54:51 by nedebies          #+#    #+#              #
-#    Updated: 2021/04/12 15:52:07 by nedebies         ###   ########.fr        #
+#    Updated: 2021/04/12 17:34:06 by nedebies         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,4 +83,4 @@ bonus:
 	$(CC) $(FLAGS) -c $(BONUS)
 	ar rc $(NAME) *.o
 
-.PHONY:			all .c.o $(NAME) clean cleanf re bonus
+.PHONY:			all .c.o $(NAME) clean fclean re bonus

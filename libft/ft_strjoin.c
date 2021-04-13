@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:39:12 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/02 12:33:23 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/12 16:15:33 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@ char	*ft_strjoin(char const *str1, char const *str2)
 	unsigned int		i;
 
 	i = 0;
-	if (str1 == NULL && str2 == NULL)
-		return (0);
-	if (str1 == NULL)
+	if (!str1 && !str2)
+		return (NULL);
+	if (!str1)
 		return ((char *)str2);
-	if (str2 == NULL)
+	if (!str2)
 		return ((char *)str1);
 	str = malloc(sizeof(char) * (ft_strlen(str1) + ft_strlen(str2)) + 1);
 	if (!str)
-		return (0);
+		return (NULL);
 	while (*str1)
 		str[i++] = *str1++;
 	while (*str2)
