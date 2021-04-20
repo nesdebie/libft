@@ -6,7 +6,7 @@
 #    By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 09:54:51 by nedebies          #+#    #+#              #
-#    Updated: 2021/04/12 17:34:06 by nedebies         ###   ########.fr        #
+#    Updated: 2021/04/17 12:41:33 by nedebies         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,30 +57,32 @@ BONUS		= ft_lstadd_back.c\
 				  ft_lstsize.c\
 				  ft_lstmap.c\
 
+OBJS = ${SRC:.c=.o}
+
 FLAGS		=	-Wall -Wextra -Werror
 
 CC			=	gcc
 
 RM			=	rm -f
 
-all:			.c.o $(NAME)
+ARRC 		=	ar rc
 
-.c.o:
-	$(CC) $(FLAGS) -c $(SRCS)
+all:			 ${NAME}
 
-$(NAME): 	.c.o
-		ar rc $(NAME) *.o
+$(NAME):	$(OBJS)
+			$(CC) -c $(FLAGS) $(SRCS) -I .
+			$(ARRC) $(NAME) $(OBJS)
 
 clean:
-	$(RM) *.o
+	${RM} *.o
 
 fclean:		clean
-		$(RM) $(NAME)
+		${RM} ${NAME}
 
 re:		fclean all
 
-bonus:
-	$(CC) $(FLAGS) -c $(BONUS)
-	ar rc $(NAME) *.o
+bonus:		$(OBJS)
+			$(CC) -c $(FLAGS) $(BONUS) -I .
+			$(ARRC) $(NAME) $(OBJS)
 
-.PHONY:			all .c.o $(NAME) clean fclean re bonus
+.PHONY:			all clean fclean re

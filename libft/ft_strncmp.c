@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:39:40 by nedebies          #+#    #+#             */
-/*   Updated: 2021/03/17 20:39:41 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/19 14:58:09 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ int	ft_strncmp(char const *s1, char const *s2, size_t n)
 		return (0);
 	while ((unsigned char)*s1 == (unsigned char)*s2 && n--)
 	{
-		if (*s1 == '\0' || *s2 == '\0')
-			return (0);
 		s1++;
 		s2++;
 	}

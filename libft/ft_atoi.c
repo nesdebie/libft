@@ -6,29 +6,29 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:33:12 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/02 12:41:41 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/20 16:58:31 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	ft_isovermaxmin(int sign, unsigned long value)
+static	int	ft_isovermaxmin(int sign)
 {
-	if (sign == 1 && value > 2147483647)
+	if (sign == 1)
 		return (-1);
-	if (sign == -1 && value > 2147483648)
-		return (0);
-	return (sign * value);
+	return (0);
 }
 
 int	ft_atoi(char const *str)
 {
 	int					i;
 	int					sign;
-	unsigned long		res;
+	unsigned long		result;
+	unsigned long		max;
 
-	res = 0;
+	result = 0;
 	i = 0;
+	max = ULONG_MAX / 10;
 	sign = 1;
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i++;
@@ -38,12 +38,12 @@ int	ft_atoi(char const *str)
 			sign *= -1;
 		i++;
 	}
-	if (str[i] < 48 || str[i] > 57)
-		return (0);
-	while (str[i] >= 48 && str[i] <= 57)
+	while (ft_isdigit(str[i]))
 	{
-		res = res * 10 + str[i] - 48;
+		result = result * 10 + str[i] - 48;
+		if (result > max)
+			return (ft_isovermaxmin(sign));
 		i++;
 	}
-	return (ft_isovermaxmin(sign, res));
+	return ((int)(sign * result));
 }

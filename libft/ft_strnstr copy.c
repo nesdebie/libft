@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/17 20:41:19 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/18 11:27:46 by nedebies         ###   ########.fr       */
+/*   Created: 2021/03/18 09:46:35 by nedebies          #+#    #+#             */
+/*   Updated: 2021/04/06 00:11:53 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strnstr(char const *str, char const *tofind, size_t n)
 {
 	unsigned int	i;
-	char			*src;
+	unsigned int	j;
 
 	i = 0;
-	if (s == NULL)
+	j = ft_strlen(tofind);
+	if (j == 0)
+		return ((char *)str);
+	if (ft_strlen(str) == 0)
 		return (NULL);
-	if (ft_strlen(s) < start)
-		len = 0;
-	else if (start + len > ft_strlen(s))
-		len = ft_strlen(s) - start;
-	src = malloc((len + 1) * sizeof(char));
-	if (src == NULL)
-		return (NULL);
-	while (len > i)
+	while (i < n)
 	{
-		src[i] = s[start];
+		if (ft_strncmp((char *)&str[i], tofind, j) == 0)
+		{
+			if (i + j > n)
+				return (NULL);
+			return ((char *)&str[i]);
+		}
 		i++;
-		start++;
 	}
-	src[i] = '\0';
-	return (src);
+	return (NULL);
 }
