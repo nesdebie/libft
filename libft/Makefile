@@ -6,7 +6,7 @@
 #    By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 09:54:51 by nedebies          #+#    #+#              #
-#    Updated: 2021/04/17 12:41:33 by nedebies         ###   ########.fr        #
+#    Updated: 2021/04/21 14:10:34 by nedebies         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,32 +57,37 @@ BONUS		= ft_lstadd_back.c\
 				  ft_lstsize.c\
 				  ft_lstmap.c\
 
-OBJS = ${SRC:.c=.o}
+CC			=	gcc
 
 FLAGS		=	-Wall -Wextra -Werror
 
-CC			=	gcc
+OBJS	=	$(SRCS:.c=.o)
 
-RM			=	rm -f
+OBJS_B	=	$(BONUS:.c=.o)
 
-ARRC 		=	ar rc
+ARRCS		=	ar rcs
 
-all:			 ${NAME}
+RM		= rm -rf
 
-$(NAME):	$(OBJS)
-			$(CC) -c $(FLAGS) $(SRCS) -I .
-			$(ARRC) $(NAME) $(OBJS)
+.c.o:	$(SRCS)
+	$(CC) $(FLAGS) -c -o $@ $<
+
+$(NAME): 	$(OBJS)
+		$(ARRCS) $(NAME) $^
+
+bonus: $(OBJS_B)
+	$(ARRCS) $(NAME) $^
+
+all:	 $(NAME)
 
 clean:
-	${RM} *.o
+	$(RM) $(OBJS) $(OBJS_B)
 
 fclean:		clean
-		${RM} ${NAME}
+		$(RM) $(NAME)
 
 re:		fclean all
 
-bonus:		$(OBJS)
-			$(CC) -c $(FLAGS) $(BONUS) -I .
-			$(ARRC) $(NAME) $(OBJS)
 
-.PHONY:			all clean fclean re
+
+.PHONY:			all clean fclean re bonus
