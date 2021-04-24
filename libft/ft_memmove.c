@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:36:42 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/08 10:01:13 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/24 19:29:18 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ static void	*setret(void *dest, const void *src, size_t n)
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	if (src == dest)
-		return (0);
+		return (dest);
 	return ((char *)setret(dest, src, n));
 }
