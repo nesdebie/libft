@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:33:12 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/28 21:55:51 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/29 00:21:13 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ static	int	ft_isovermaxmin(int sign)
 
 int	ft_atoi(char const *str)
 {
-	int			i;
-	int			sign;
-	long long	result;
-	int			cpt;
+	int		i;
+	int		sign;
+	long	result;
+	int		cpt;
 
 	result = 0;
 	i = 0;
@@ -41,7 +41,7 @@ int	ft_atoi(char const *str)
 	while (ft_isdigit(str[i]))
 	{
 		result = result * 10 + str[i] - 48;
-		if (result > LONG_MAX || result < 0 || ++cpt > 19)
+		if (result < 0 || ++cpt > 19)
 			return (ft_isovermaxmin(sign));
 		i++;
 	}
