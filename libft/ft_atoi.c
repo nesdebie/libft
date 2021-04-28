@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:33:12 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/28 15:06:49 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/28 21:55:51 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	ft_atoi(char const *str)
 	int			sign;
 	long long	result;
 	int			cpt;
+
 	result = 0;
 	i = 0;
 	sign = 1;

@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:37:44 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/28 14:02:13 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/28 21:54:46 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ static	char	**ft_free_my_split(size_t j, char **split)
 
 static int	ft_words_count(char const *str, char c)
 {
-	size_t		i;
-	size_t		wc;
+	size_t	i;
+	size_t	wc;
 
 	i = 0;
 	wc = 0;
@@ -43,7 +43,7 @@ static int	ft_words_count(char const *str, char c)
 
 static char	*ft_add_word(char const *str, char c)
 {
-	size_t		i;
+	size_t	i;
 	char	*lstr;
 
 	i = 0;
