@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:33:12 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/22 10:43:41 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/28 12:25:53 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_atoi(char const *str)
 
 	result = 0;
 	i = 0;
-	max = LONG_MAX / 10;
+	max = LONG_MAX;
 	sign = 1;
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i++;

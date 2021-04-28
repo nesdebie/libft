@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:37:06 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/05 22:13:00 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/28 12:32:59 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (s)

@@ -6,13 +6,13 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:37:44 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/05 22:08:55 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/28 14:02:13 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	char	**ft_free_my_split(unsigned int j, char **split)
+static	char	**ft_free_my_split(size_t j, char **split)
 {
 	while (j != 0)
 		free(split[--j]);
@@ -20,21 +20,10 @@ static	char	**ft_free_my_split(unsigned int j, char **split)
 	return (NULL);
 }
 
-static	char	**ft_protect(void)
-{
-	char	**str;
-
-	str = malloc(sizeof(char *));
-	if (str == NULL)
-		return (0);
-	str[0] = 0;
-	return (str);
-}
-
 static int	ft_words_count(char const *str, char c)
 {
-	int		i;
-	int		wc;
+	size_t		i;
+	size_t		wc;
 
 	i = 0;
 	wc = 0;
@@ -54,7 +43,7 @@ static int	ft_words_count(char const *str, char c)
 
 static char	*ft_add_word(char const *str, char c)
 {
-	int		i;
+	size_t		i;
 	char	*lstr;
 
 	i = 0;
@@ -75,14 +64,14 @@ static char	*ft_add_word(char const *str, char c)
 
 char	**ft_split(char const *str, char c)
 {
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 	char	**split;
 
 	i = 0;
 	j = 0;
 	if (!str)
-		return (ft_protect());
+		return (NULL);
 	split = malloc(sizeof(char *) * (ft_words_count(str, c) + 1));
 	if (!split)
 		return (0);

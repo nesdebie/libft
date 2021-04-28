@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:37:18 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/05 22:12:58 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/28 12:33:09 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (s)

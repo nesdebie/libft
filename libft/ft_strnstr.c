@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/18 09:46:35 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/06 00:11:53 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/28 12:35:26 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(char const *str, char const *tofind, size_t n)
 {
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = ft_strlen(tofind);

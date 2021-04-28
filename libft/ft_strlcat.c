@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:39:17 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/12 19:52:01 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/28 12:34:35 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dest, char const *src, size_t n)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	tmp;
+	size_t	i;
+	size_t	j;
+	size_t	tmp;
 
 	i = ft_strlen(dest);
 	j = 0;

@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:39:46 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/05 22:22:02 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/28 13:43:55 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strrchr(char const *str, int c)
 {
-	int				i;
+	int			i;
 	unsigned char	my_c;
 
 	my_c = (unsigned char)c;
 	i = ft_strlen(str);
-	while (i >= 0)
+	while (i != -1)
 	{
 		if (str[i] == my_c)
 			return ((char *)(&str[i]));

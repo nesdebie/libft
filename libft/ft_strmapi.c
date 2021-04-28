@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:39:34 by nedebies          #+#    #+#             */
-/*   Updated: 2021/03/17 20:39:35 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/28 12:35:11 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*str;
-	unsigned int	i;
-	unsigned int	len;
+	size_t	i;
+	size_t	len;
 
 	if (s == NULL || f == NULL)
 		return (0);

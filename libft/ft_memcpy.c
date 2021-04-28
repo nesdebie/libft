@@ -6,7 +6,7 @@
 /*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:36:36 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/05 22:36:04 by nedebies         ###   ########.fr       */
+/*   Updated: 2021/04/28 12:32:01 by nedebies         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
 	unsigned char	*d;
 	unsigned char	*s;
 
