@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:37:51 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/05 22:21:39 by nedebies         ###   ########.fr       */
+/*   Updated: 2023/03/20 10:46:47 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(char const *str, int c)
 			return ((char *)str);
 		str++;
 	}
-	if (my_c == 0)
+	if (!my_c)
 		return ((char *)str);
 	return (NULL);
 }

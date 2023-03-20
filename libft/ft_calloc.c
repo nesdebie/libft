@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:33:35 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/28 12:30:12 by nedebies         ###   ########.fr       */
+/*   Updated: 2023/03/20 10:37:02 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_calloc(size_t n, size_t size)
 		size = 1;
 	}
 	ptr = malloc(n * size);
-	if (ptr == NULL)
+	if (!ptr)
 		return (0);
 	while (i < (n * size))
 	{

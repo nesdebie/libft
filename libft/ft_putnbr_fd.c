@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:37:11 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/02 12:48:57 by nedebies         ###   ########.fr       */
+/*   Updated: 2023/03/20 10:45:48 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static char	ft_putchar(int nb)
 {
 	char	n;
 
-	n = '0' + nb;
+	n = nb + '0';
 	return (n);
 }
 

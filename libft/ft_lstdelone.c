@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:50:13 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/12 15:50:15 by nedebies         ###   ########.fr       */
+/*   Updated: 2023/03/20 10:40:34 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst != NULL && del != NULL)
+	if (lst && del)
 	{
 		(*del)(lst->content);
 		free(lst);

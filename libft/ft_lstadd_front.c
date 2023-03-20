@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:49:39 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/12 15:49:41 by nedebies         ###   ########.fr       */
+/*   Updated: 2023/03/20 10:39:51 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstadd_front(t_list **alst, t_list *new)
 	t_list	*tmp;
 
 	tmp = *alst;
-	if (!(alst == NULL) && !(new == NULL))
+	if (alst && new)
 	{
 		new->next = tmp;
 		*alst = new;

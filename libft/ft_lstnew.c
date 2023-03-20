@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:51:21 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/28 23:15:35 by nedebies         ###   ########.fr       */
+/*   Updated: 2023/03/20 10:41:08 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstnew(void *content)
 	t_list	*new;
 
 	new = (t_list *)malloc(sizeof(t_list));
-	if (new == NULL)
+	if (!new)
 		return (NULL);
 	new->content = content;
 	new->next = NULL;

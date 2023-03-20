@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:51:35 by nedebies          #+#    #+#             */
-/*   Updated: 2021/04/28 12:30:49 by nedebies         ###   ########.fr       */
+/*   Updated: 2023/03/20 10:41:24 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int	ft_lstsize(t_list *lst)
 	size_t	i;
 
 	i = 0;
-	if (lst == NULL)
+	if (!lst)
 		return (0);
-	while (lst != NULL)
+	while (lst)
 	{
 		lst = lst->next;
 		i++;
