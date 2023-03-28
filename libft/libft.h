@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 20:41:43 by nedebies          #+#    #+#             */
-/*   Updated: 2023/03/20 10:51:42 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/03/28 22:33:49 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ int				ft_isascii(int c);
 int				ft_isdigit(int c);
 int				ft_isprint(int c);
 char			*ft_itoa(int n);
-void			*ft_memccpy(void *dest, const void *src, int c, size_t n);
+//void			*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void ft_striteri(char *s, void (*f)(unsigned int, char *));
 void			*ft_memchr(const void *str, int c, size_t n);
 int				ft_memcmp(const void *str1, const void *str2, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);

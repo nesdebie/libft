@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nedebies <nedebies@student.s19.be>         +#+  +:+       +#+         #
+#    By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/08 09:54:51 by nedebies          #+#    #+#              #
-#    Updated: 2021/04/21 14:17:01 by nedebies         ###   ########.fr        #
+#    Updated: 2023/03/28 22:33:02 by nesdebie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS 	=	ft_atoi.c\
 		ft_tolower.c\
 		ft_bzero.c\
 		ft_isascii.c\
-		ft_memccpy.c\
+		ft_striteri.c\
 		ft_memmove.c\
 		ft_strdup.c\
 		ft_strlen.c\
