@@ -6,7 +6,7 @@
 /*   By: nesdebie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 23:03:52 by nesdebie          #+#    #+#             */
-/*   Updated: 2023/03/28 23:04:00 by nesdebie         ###   ########.fr       */
+/*   Updated: 2023/04/06 12:49:25 by nesdebie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dest, char const *src, size_t n)
 	size_t	i;
 	size_t	tmp;
 
+	if (!dest && n == 0)
+		return (ft_strlen(src));
 	dest_len = ft_strlen(dest);
 	i = 0;
 	while (src[i] && (i + dest_len + 1) < n)

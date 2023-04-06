@@ -62,7 +62,7 @@ static char	*ft_add_word(char const *str, char c)
 	return (lstr);
 }
 
-char	**ft_split(char const *str, char c)
+char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
@@ -70,19 +70,19 @@ char	**ft_split(char const *str, char c)
 
 	i = 0;
 	j = 0;
-	if (!str)
+	if (!s)
 		return (NULL);
-	split = malloc(sizeof(char *) * (ft_words_count(str, c) + 1));
+	split = malloc(sizeof(char *) * (ft_words_count(s, c) + 1));
 	if (!split)
 		return (0);
-	while (str[i])
+	while (s[i])
 	{
-		if (str[i] != c)
+		if (s[i] != c)
 		{
-			split[j] = ft_add_word(&str[i], c);
+			split[j] = ft_add_word(&s[i], c);
 			if (!split[j++])
 				return (ft_free_my_split(--j, split));
-			while (str[i + 1] && str[i + 1] != c)
+			while (s[i + 1] && s[i + 1] != c)
 				i++;
 		}
 		i++;
