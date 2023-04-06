@@ -63,7 +63,7 @@ FLAGS		=	-Wall -Wextra -Werror
 
 OBJS	=	$(SRCS:.c=.o)
 
-OBJS_B	=	$(BONUS:.c=.o)
+OBJS_B	=	$(SRCS:.c=.o) $(BONUS:.c=.o)
 
 ARRCS		=	ar rcs
 
@@ -87,7 +87,5 @@ fclean:		clean
 		$(RM) $(NAME)
 
 re:		fclean all
-
-
 
 .PHONY:			all clean fclean re bonus
