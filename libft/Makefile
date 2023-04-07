@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME  = libft.a
+NAME  = libft
 
 SRCS 	=	ft_atoi.c\
 		ft_isalpha.c\
@@ -57,34 +57,34 @@ BONUS		= ft_lstadd_back_bonus.c\
 				  ft_lstsize_bonus.c\
 				  ft_lstmap_bonus.c\
 
-CC			=	gcc
+CC			=	cc
 
 FLAGS		=	-Wall -Wextra -Werror
 
 OBJS	=	$(SRCS:.c=.o)
 
-OBJS_B	=	$(SRCS:.c=.o) $(BONUS:.c=.o)
+OBJS_B	=	$(BONUS:.c=.o)
 
 ARRCS		=	ar rcs
 
 RM		= rm -rf
 
-.c.o:	$(SRCS)
+.c.o:
 	$(CC) $(FLAGS) -c -o $@ $<
 
-$(NAME): 	$(OBJS)
-		$(ARRCS) $(NAME) $^
+$(NAME).a: 	$(OBJS)
+		$(ARRCS) $(NAME).a $^
 
-bonus: $(OBJS_B)
-	$(ARRCS) $(NAME) $^
+bonus: $(OBJS) $(OBJS_B)
+	$(ARRCS) $(NAME).a $^
 
-all:	 $(NAME)
+all:	 $(NAME).a
 
 clean:
 	$(RM) $(OBJS) $(OBJS_B)
 
 fclean:		clean
-		$(RM) $(NAME)
+		$(RM) $(NAME).a
 
 re:		fclean all
 
